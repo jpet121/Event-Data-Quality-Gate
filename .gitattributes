@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.rs -text
+Cargo.toml -text
+Cargo.lock -text
+examples/*.json -text

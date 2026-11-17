@@ -1,0 +1,19 @@
+abi <abi/4.0>,
+include <tunables/global>
+
+profile sesv-m1 /opt/sesv/bin/sesv {
+  # Operator-selected paths retain Linux ownership and mode checks. Executable
+  # mappings are restricted to the installed binary and system libraries.
+  /** rwk,
+  /opt/sesv/bin/sesv mr,
+  /{,usr/}lib{,64}/** mr,
+  userns,
+  # Setting the group map checks CAP_SYS_ADMIN in the new user namespace.
+  capability sys_admin,
+  capability dac_override,
+  network unix,
+  signal (receive) peer=unconfined,
+  signal (send, receive) peer=sesv-m1,
+  ptrace (readby) peer=unconfined,
+  ptrace (read, readby) peer=sesv-m1,
+}

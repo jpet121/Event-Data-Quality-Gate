@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:example:telemetry:pulse",
+  "type": "object",
+  "properties": {
+    "device_id": {"type": "string", "minLength": 1, "maxLength": 64},
+    "state": {"type": "string", "enum": ["up", "down"]}
+  },
+  "required": ["device_id", "state"],
+  "additionalProperties": false
+}
