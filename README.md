@@ -1,8 +1,12 @@
-# Structured Event Schema Validator
+# Event File Validator
 
-Rust command-line tool and library for local event validation.
+Check JSON event files before importing them. This Rust command-line tool shows which records pass, explains which fail, and exports the passing records.
 
-Validate event files against a selected schema and policy. Read a result for each record. Export the records that pass. Verify the output directory before you use its contents.
+Use a schema and policy you select. Verify the output directory before using its contents.
+
+![Terminal demo showing four events checked, three passing, one rejected, and successful output verification.](docs/images/demo.png)
+
+The image summarizes an actual run with the included sample files.
 
 ## Quick start
 

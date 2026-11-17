@@ -3,3 +3,4 @@
 Cargo.toml -text
 Cargo.lock -text
 examples/*.json -text
+licenses/** linguist-vendored
