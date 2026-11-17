@@ -1,4 +1,4 @@
-# Event File Validator
+# Event Data Quality Gate
 
 Check JSON event files before importing them. This Rust command-line tool shows which records pass, explains which fail, and exports the passing records.
 
