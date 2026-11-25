@@ -1,8 +1,8 @@
 # Event Data Quality Gate
 
-Check JSON event files before importing them. This Rust command-line tool shows which records pass, explains which fail, and exports the passing records.
+**Scenario.** A data engineer receives four JSON events for import. One order total is a cent higher than the sum of its line items. The gate checks each event against the chosen rules and writes the three passing records to a separate file.
 
-Use a schema and policy you select. Verify the output directory before using its contents.
+**Value.** The engineer can verify the file of passing records and hand it off for import. The source team gets the exact rule that failed and can correct the one bad order.
 
 ![Terminal demo showing four events checked, three passing, one rejected, and successful output verification.](docs/images/demo.png)
 
